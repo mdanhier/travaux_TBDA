@@ -11,8 +11,10 @@
 
 <body>
     <header>
-        <img src="assets/img/jarditou_logo.jpg" alt="Logo Jarditou" title="Logo Jarditou" id="logo"><br>
-        <p id="slogan">La qualité depuis 70 ans</p>
+        <div id="banner">
+            <img src="assets/img/jarditou_logo.jpg" alt="Logo Jarditou" title="Logo Jarditou" id="logo">
+            <p id="catchphrase">Tout le jardin</p>
+        </div>
         <nav>
             <ul class="navlist">
                 <li><a href="index.html">Accueil</a></li>
@@ -28,22 +30,22 @@
         <form action="http://bienvu.net/script.php" method="post">
             <fieldset>
                 <legend>Vos coordonnées</legend>
-                <label for="nom">Votre nom* : </label><input type="text" name="nom" id="nom" required><br>
-                <label for="prenom">Votre prenom* : </label><input type="text" name="prenom" id="prenom" required><br>
-                <p>Sexe* : <br>
+                <label for="nom">Votre nom* : </label><input type="text" name="nom" id="nom" required>
+                <label for="prenom">Votre prenom* : </label><input type="text" name="prenom" id="prenom" required>
+                <p>Sexe* :
                     <input type="radio" id="masculin" name="sexe" value="masculin" required checked><label
-                        for="masculin">Masculin</label><br>
+                        for="masculin">Masculin</label>
                     <input type="radio" id="feminin" name="sexe" value="feminin" required><label
-                        for="feminin">Féminin</label><br>
+                        for="feminin">Féminin</label>
                     <input type="radio" id="autre" name="sexe" value="autre" required><label for="autre">Autre</label>
                 </p>
                 <label for="naissance">Date de naissance* : </label><input type="date" name="naissance" id="naissance"
-                    required><br>
-                <label for="cp"></label>Code Postal* : <input type="text" name="cp" id="cp" maxlength="5" required><br>
-                <label for="adresse">Adresse* : </label><input type="text" name="adresse" id="adresse" required><br>
-                <label for="ville">Ville* : </label><input type="text" name="ville" id="ville"><br>
+                    required>
+                <label for="cp"></label>Code Postal* : <input type="text" name="cp" id="cp" maxlength="5" required>
+                <label for="adresse">Adresse* : </label><input type="text" name="adresse" id="adresse" required>
+                <label for="ville">Ville* : </label><input type="text" name="ville" id="ville">
                 <label for="email">Email* : </label><input type="email" name="email" id="email"
-                    placeholder="dave.loper@afpa.fr" required><br>
+                    placeholder="dave.loper@afpa.fr" required>
             </fieldset>
             <fieldset>
                 <legend>Votre demande</legend>
@@ -53,7 +55,7 @@
                     <option value="question">Question sur un produit</option>
                     <option value="reclamation">Réclamation</option>
                     <option value="autre">Autres</option>
-                </select><br>
+                </select>
                 <label for="message">Votre question* : </label><textarea name="message" id="message" cols="20"
                     rows="6"></textarea>
                 <p>

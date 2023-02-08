@@ -37,12 +37,20 @@ h6 {
     font-family: 'Lato', sans-serif;
 }
 
-#logo {
-    width: 30vw;
+#banner {
+    display: flex;
+    align-items: center;
 }
 
-#slogan {
-    font-size: 1em;
+#logo {
+    width: 30vw;
+    justify-self: flex-start;
+}
+
+#catchphrase {
+    font-size: 2em;
+    flex-grow: 1;
+    text-align: center;
 }
 
 h1,
@@ -73,6 +81,8 @@ nav {
 .navlist>li>a:hover {
     color: salmon;
 }
+
+#left {}
 
 footer {
     position: sticky;
