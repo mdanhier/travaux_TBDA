@@ -30,42 +30,41 @@
                 <fieldset>
                     <legend>Vos coordonnées</legend>
                     <div class="persinfo">
-                        <label for="nom">Votre nom* : </label><input type="text" name="nom" class="nom" required>
-                        <label for="prenom">Votre prenom* : </label><input type="text" name="prenom" class="prenom"
+                        <label for="nom">Votre nom* : </label><input type="text" name="nom" id="nom" required>
+                        <label for="prenom">Votre prenom* : </label><input type="text" name="prenom" id="prenom"
                             required>
                         <p>Sexe* :
-                            <input type="radio" class="masculin" name="sexe" value="masculin" required checked><label
+                            <input type="radio" id="masculin" name="sexe" value="masculin" required checked><label
                                 for="masculin">Masculin</label>
-                            <input type="radio" class="feminin" name="sexe" value="feminin" required><label
+                            <input type="radio" id="feminin" name="sexe" value="feminin" required><label
                                 for="feminin">Féminin</label>
-                            <input type="radio" class="autre" name="sexe" value="autre" required><label
+                            <input type="radio" id="autre" name="sexe" value="autre" required><label
                                 for="autre">Autre</label>
                         </p>
                         <label for="naissance">Date de naissance* : </label><input type="date" name="naissance"
-                            class="naissance" required>
-                        <label for="cp"></label>Code Postal* : <input type="text" name="cp" class="cp" maxlength="5"
+                            id="naissance" required>
+                        <label for="cp"></label>Code Postal* : <input type="text" name="cp" id="cp" maxlength="5"
                             required>
-                        <label for="adresse">Adresse* : </label><input type="text" name="adresse" class="adresse"
-                            required>
-                        <label for="ville">Ville* : </label><input type="text" name="ville" class="ville">
-                        <label for="email">Email* : </label><input type="email" name="email" class="email"
+                        <label for="adresse">Adresse* : </label><input type="text" name="adresse" id="adresse" required>
+                        <label for="ville">Ville* : </label><input type="text" name="ville" id="ville">
+                        <label for="email">Email* : </label><input type="email" name="email" id="email"
                             placeholder="dave.loper@afpa.fr" required>
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend>Votre demande</legend>
                     <div class="query">
-                        <label for="sujet">Sujet* : </label><select class="sujet" name="sujet" required>
+                        <label for="sujet">Sujet* : </label><select id="sujet" name="sujet" required>
                             <option value="" disabled selected>Veuillez sélectionner un sujet</option>
                             <option value="commande">Mes commandes</option>
                             <option value="question">Question sur un produit</option>
                             <option value="reclamation">Réclamation</option>
                             <option value="autre">Autres</option>
                         </select>
-                        <label for="message">Votre question* : </label><textarea name="message" class="message"
-                            cols="20" rows="6"></textarea>
+                        <label for="message">Votre question* : </label><textarea name="message" id="message" cols="20"
+                            rows="6"></textarea>
                         <div class="consent">
-                            <input type="checkbox" class="traitement" name="traitement"><label for="traitement">*
+                            <input type="checkbox" id="traitement" name="traitement"><label for="traitement">*
                                 J'accepte
                                 le
                                 traitement
