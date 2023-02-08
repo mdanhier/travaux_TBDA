@@ -49,6 +49,12 @@ h6 {
     font-size: 1em;
 }
 
+h1,
+h2,
+p {
+    padding: 5px;
+}
+
 nav {
     background-color: #000;
 }
@@ -70,4 +76,8 @@ nav {
 
 .navlist>li>a:hover {
     color: salmon;
+}
+
+footer {
+    position: fixed;
 }
