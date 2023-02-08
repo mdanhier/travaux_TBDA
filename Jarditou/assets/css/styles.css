@@ -38,23 +38,23 @@ h6 {
     font-family: 'Lato', sans-serif;
 }
 
-#banner {
+.banner {
     display: flex;
     align-items: center;
 }
 
-#logo {
+.logo {
     width: 30vw;
     justify-self: flex-start;
 }
 
-#catchphrase {
-    font-size: 2em;
+.catchphrase {
+    font-size: 48px;
     flex-grow: 1;
     text-align: center;
 }
 
-#promo {
+.promo {
     width: 100%;
 }
 
@@ -74,6 +74,7 @@ nav {
     padding: 10px;
     color: lightgray;
     margin: 0;
+    font-size: 24px;
 }
 
 .navlist>li {
@@ -88,24 +89,27 @@ nav {
     color: salmon;
 }
 
-#content {
+.content {
     display: flex;
+    width: 100vw;
 }
 
-#left {
+.left {
+    font-size: 20px;
     flex-grow: 1;
 }
 
-#right {
-    font-size: 2rem;
+.right {
+    font-size: 36px;
     word-break: break-all;
     background-color: #888;
-    min-width: 30vw;
+    min-width: 25vw;
+    max-width: 25vw;
     text-align: center;
 }
 
 footer {
-    position: sticky;
+    left: 0;
     bottom: 0;
     width: 100%;
     margin: 0;
@@ -137,12 +141,31 @@ table img {
     width: 150px;
 }
 
-#persinfo,
-#query {
+.persinfo,
+.query {
     display: flex;
     flex-direction: column;
 }
 
-#consent {
+.consent {
     display: inline;
+}
+
+@media (max-width: 768px) {
+    .right {
+        display: none;
+    }
+
+    .navlist {
+        flex-direction: column;
+        font-size: 16px;
+    }
+
+    .catchphrase {
+        font-size: 24px;
+    }
+
+    .left {
+        font-size: 14px;
+    }
 }
