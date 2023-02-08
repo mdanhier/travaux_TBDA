@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+#logo {
+    width: 30vw;
+}
+
+#slogan {
+    font-size: 1em;
+}
+
+nav {
+    background-color: #000;
+}
+
+.navlist {
+    list-style-type: none;
+    display: flex;
+    padding: 10px;
+    color: lightgray;
+}
+
+.navlist>li {
+    margin: 5px;
+}
+
+.navlist>li>a {
+    color: lightgray;
+}
+
+.navlist>li>a:hover {
+    color: salmon;
+}
