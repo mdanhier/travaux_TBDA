@@ -7,6 +7,7 @@
 html,
 body {
     height: 100%;
+    margin: 0;
 }
 
 body {
@@ -53,6 +54,10 @@ h6 {
     text-align: center;
 }
 
+#promo {
+    width: 100%;
+}
+
 h1,
 h2,
 p {
@@ -68,6 +73,7 @@ nav {
     display: flex;
     padding: 10px;
     color: lightgray;
+    margin: 0;
 }
 
 .navlist>li {
@@ -82,11 +88,61 @@ nav {
     color: salmon;
 }
 
-#left {}
+#content {
+    display: flex;
+}
+
+#left {
+    flex-grow: 1;
+}
+
+#right {
+    font-size: 2rem;
+    word-break: break-all;
+    background-color: #888;
+    min-width: 30vw;
+    text-align: center;
+}
 
 footer {
     position: sticky;
     bottom: 0;
     width: 100%;
     margin: 0;
+}
+
+table {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-color: #7ea8f8;
+    border-style: solid;
+    color: #000000;
+}
+
+table td,
+table th {
+    border-width: 2px;
+    border-color: #7ea8f8;
+    border-style: solid;
+    padding: 5px;
+}
+
+table thead {
+    background-color: #7ea8f8;
+}
+
+table img {
+    width: 150px;
+}
+
+#persinfo,
+#query {
+    display: flex;
+    flex-direction: column;
+}
+
+#consent {
+    display: inline;
 }
