@@ -18,56 +18,98 @@
         <ul>
             <li><a href="#ex1">Exercice 1</a></li>
             <li><a href="#ex2">Exercice 2</a></li>
+            <li><a href="#ex3">Exercice 3</a></li>
         </ul>
     </nav>
     <div class="content">
         <div id="ex1" class="exs">
-            <h2>Exercice 1</h2>
-            <ol>
-                <li>
-                    <p>Créer un script qui demande successivement à l'utilisateur son nom puis son prénom. La page
-                        affichera
-                        les
-                        informations sur l'utilisateur via une "alert()".</p>
-                </li>
-                <li>
-                    <p>Ecrire un programme qui calcule le produit de deux nombres entrés par l'utilisateur et affiche le
-                        résultat.</p>
-                </li>
-                <li>
-                    <p>Ecrire un programme qui convertit des degrés Celsius en degrés Fahrenheit en utilisant la formule
-                        suivante : F = (C*9/5) + 32.
-                        Le programme demandera la température en degrés Celsius à l'utilisateur et affichera la
-                        température
-                        convertie en degrés Fahrenheit.</p>
-                </li>
-            </ol>
-            <button class="buttonEx" onclick="ex1_1()">Exercice 1</button>
-            <button class="buttonEx" onclick="ex1_2()">Exercice 2</button>
-            <button class="buttonEx" onclick="ex1_3()">Exercice 3</button>
+            <div>
+                <h2>Exercice 1</h2>
+                <ol>
+                    <li>
+                        <p>Créer un script qui demande successivement à l'utilisateur son nom puis son prénom. La page
+                            affichera
+                            les
+                            informations sur l'utilisateur via une "alert()".</p>
+                    </li>
+                    <li>
+                        <p>Ecrire un programme qui calcule le produit de deux nombres entrés par l'utilisateur et
+                            affiche le
+                            résultat.</p>
+                    </li>
+                    <li>
+                        <p>Ecrire un programme qui convertit des degrés Celsius en degrés Fahrenheit en utilisant la
+                            formule
+                            suivante : F = (C*9/5) + 32.
+                            Le programme demandera la température en degrés Celsius à l'utilisateur et affichera la
+                            température
+                            convertie en degrés Fahrenheit.</p>
+                    </li>
+                </ol>
+                <button class="buttonEx" onclick="ex1_1()">Exercice 1</button>
+                <button class="buttonEx" onclick="ex1_2()">Exercice 2</button>
+                <button class="buttonEx" onclick="ex1_3()">Exercice 3</button>
+            </div>
         </div>
         <div id="ex2" class="exs">
-            <h2>Exercice 2</h2>
-            <p>Soit les variables suivantes : </p>
-            <ul>
-                <li><code>a</code> qui contient la chaîne de caractères 100</li>
-                <li><code>b</code> = 100</li>
-                <li><code>c</code> qui contient la valeur 1,00</li>
-                <li><code>d</code> booléen qui vaut vrai</li>
-            </ul>
-            <p>A réaliser :</p>
-            <ol>
-                <li>Affichez "Ceci est une chaîne de caractères :" et concaténez cette chaîne avec la variable
-                    <code>a</code> pour afficher "Ceci est une chaîne de caractères : <em>100</em>".
-                </li>
-                <li>Appliquez à <code>b</code> l'opérateur de décrémentation</li>
-                <li>Ajoutez à <code>c</code> la valeur de <code>a</code> </li>
-                <li>Inversez la valeur de <code>d</code></li>
-            </ol>
-            <button class="buttonEx" onclick="ex2_1()">Exercice 1</button>
-            <button class="buttonEx" onclick="ex2_2()">Exercice 2</button>
-            <button class="buttonEx" onclick="ex2_3()">Exercice 3</button>
-            <button class="buttonEx" onclick="ex2_4()">Exercice 4</button>
+            <div>
+                <h2>Exercice 2</h2>
+                <p>Soit les variables suivantes : </p>
+                <ul>
+                    <li><code>a</code> qui contient la chaîne de caractères 100</li>
+                    <li><code>b</code> = 100</li>
+                    <li><code>c</code> qui contient la valeur 1,00</li>
+                    <li><code>d</code> booléen qui vaut vrai</li>
+                </ul>
+                <p>A réaliser :</p>
+                <ol>
+                    <li>Affichez "Ceci est une chaîne de caractères :" et concaténez cette chaîne avec la variable
+                        <code>a</code> pour afficher "Ceci est une chaîne de caractères : <em>100</em>".
+                    </li>
+                    <li>Appliquez à <code>b</code> l'opérateur de décrémentation</li>
+                    <li>Ajoutez à <code>c</code> la valeur de <code>a</code> </li>
+                    <li>Inversez la valeur de <code>d</code></li>
+                </ol>
+                <button class="buttonEx" onclick="ex2_1()">Exercice 1</button>
+                <button class="buttonEx" onclick="ex2_2()">Exercice 2</button>
+                <button class="buttonEx" onclick="ex2_3()">Exercice 3</button>
+                <button class="buttonEx" onclick="ex2_4()">Exercice 4</button>
+            </div>
+        </div>
+        <div id="ex3" class="exs">
+            <div>
+                <h2>Exercice 3</h2>
+                <ol>
+                    <li>
+                        <p>Ecrivez un programme qui demande un nombre à l'utilisateur puis qui teste si ce nombre est
+                            pair.
+                            Le programme doit afficher le résultat <em>nombre pair</em> ou <em>nombre impair</em>. Vous
+                            devez utiliser l'opérateur modulo <code>%</code> qui donne le reste d'une division.
+                            <code>a%2</code> donne le reste de la division de <code>a</code> par 2, si ce reste est égal
+                            à
+                            zéro, <code>a</code> est divisible par 2.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Ecrivez un programme qui demande l'année de naissance à l'utilisateur.
+                            En réponse votre programme doit afficher l'âge de l'utilisateur et indiquer si l'utilisateur
+                            est
+                            majeur ou mineur.</p>
+                    </li>
+                    <li>
+                        <p>Faire la saisie de 2 nombres entiers, puis la saisie d'un opérateur <code>+</code>,
+                            <code>-</code>, <code>*</code> ou <code>/</code>.
+                        </p>
+                        <p>Si l'utilisateur entre un opérateur erroné, le programme affichera un message d'erreur.</p>
+                        <p>Dans le cas contraire, le programme effectuera l'opération demandée (en prévoyant le cas
+                            d'erreur <em>division par 0</em>), puis affichera le résultat.
+                        </p>
+                    </li>
+                </ol>
+                <button class="buttonEx" onclick="ex3_1()">Exercice 1</button>
+                <button class="buttonEx" onclick="ex3_2()">Exercice 2</button>
+                <button class="buttonEx" onclick="ex3_3()">Exercice 3</button>
+            </div>
         </div>
     </div>
 </body>
