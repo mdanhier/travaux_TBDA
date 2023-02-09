@@ -1,0 +1,52 @@
+html,
+body {
+    font-size: 20px;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+hr {
+    border-top: 1px dotted red;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    position: fixed;
+    height: 100vh;
+    width: 10vw;
+    background-color: #000;
+}
+
+.exs {
+    width: 100%;
+    margin-left: 12vw;
+}
+
+nav li {
+    color: #ff0;
+    font-size: 24px;
+}
+
+nav a {
+    color: #ff0;
+}
+
+.buttonEx {
+    background-color: #000;
+    color: #ff0;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    border: 0;
+    font-size: 16px;
+}
+
+.buttonEx:hover {
+    background: #333;
+}
