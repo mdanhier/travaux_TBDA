@@ -178,5 +178,5 @@ function ex3_3() {
 }
 
 function ex4_1() {
-    let prenom = prompt("Entrez un prénom.")
+    let prenom = prompt("Entrez un prénom.");
 }
