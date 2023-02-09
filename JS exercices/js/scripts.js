@@ -55,8 +55,6 @@ function ex1_2() {
     }
 }
 
-
-
 function ex1_3() {
     function convertCelToFahr(cel) {
         if (testNumber(cel)) {
@@ -75,4 +73,29 @@ function ex1_3() {
     } catch (err) {
         alert(err.message);
     }
+}
+
+
+function ex2_1() {
+    let ex2a = "100";
+    alert("Ceci est une chaîne de caractères : " + ex2a);
+}
+function ex2_2() {
+    let ex2b = 100;
+    alert("b vaut " + ex2b);
+    ex2b--;
+    alert("Après décrémentation, b vaut " + ex2b);
+}
+function ex2_3() {
+    let ex2a = "100";
+    let ex2c = 1.00
+    alert("c vaut " + ex2c + " et a vaut " + ex2a);
+    ex2c += ex2a;
+    alert("On ajoute à c la valeur de a, c vaut maintenant " + ex2c)
+}
+function ex2_4() {
+    let ex2d = true;
+    alert("d vaut " + ex2d);
+    ex2d = !ex2d;
+    alert("Après inversion, d vaut " + ex2d);
 }
