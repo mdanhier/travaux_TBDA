@@ -112,7 +112,7 @@ function ex2_4() {
     let ex2d = true;
     alert("d vaut " + ex2d);
     ex2d = !ex2d;
-    alert("Après inversion, d vaut " + ex2d);
+    alert("Après inversion, d vaut " + ex2d + ".");
 }
 
 function ex3_1() {
@@ -125,7 +125,7 @@ function ex3_1() {
     let nb = prompt("Entrez un nombre");
     try {
         if (testEvenOdd(nb)) alert("Nombre pair.");
-        else alert("Nombre impair");
+        else alert("Nombre impair.");
     } catch (err) {
         alert(err.message);
     }
@@ -144,7 +144,7 @@ function ex3_2() {
         if (isNaN(Date.parse(birthDate))) throw new Error("Merci de rentrer une date correcte.");
         else return ~~((Date.now() - birthDate) / (31557600000));
     }
-    let birthDateStr = prompt("Entrez votre date de naissance au format JJ MM YYYY");
+    let birthDateStr = prompt("Entrez votre date de naissance au format JJ MM YYYY.");
     try {
         let age = calcAge(birthDateStr);
         if (age >= 18) alert("Vous avez " + age + " ans. Vous êtes enfin majeur !")
@@ -155,9 +155,9 @@ function ex3_2() {
 }
 
 function ex3_3() {
-    let x = prompt("Entrez un premier nombre");
-    let y = prompt("Entrez un deuxième nombre");
-    let o = prompt("Entrez un opérateur parmis + - * /")
+    let x = prompt("Entrez un premier nombre.");
+    let y = prompt("Entrez un deuxième nombre.");
+    let o = prompt("Entrez un opérateur parmis + - * /.")
     // simple switch pour évaluer quel opérateur l'utilisateur a entré
     try {
         switch (o) {
@@ -170,9 +170,13 @@ function ex3_3() {
             case '/':
                 return alert("Le résultat de " + x + o + y + " est : " + divide(x, y));
             default:
-                throw new Error(o + " n'est pas un opérateur valide");
+                throw new Error(o + " n'est pas un opérateur valide.");
         }
     } catch (err) {
         alert(err.message);
     }
+}
+
+function ex4_1() {
+    let prenom = prompt("Entrez un prénom.")
 }
