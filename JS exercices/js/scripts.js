@@ -99,14 +99,14 @@ function ex2_2() {
 }
 function ex2_3() {
     let ex2a = "100";
-    let ex2c = 1.00
+    let ex2c = 1.00;
     alert("c vaut " + ex2c + " et a vaut " + ex2a + ".");
     ex2c += ex2a;
     alert("On ajoute à c la valeur de a, c vaut maintenant " + ex2c + ".")
     ex2a = "100";
     ex2c = 1.00;
     ex2c += +ex2a;
-    alert("Si on souhaite réellement additionner et non concaténer, il faut rajouter un '+' avant la variable a (qui a été définie comme une chaîne de caractères). Quand on procède ainsi, c vaut " + ex2c + ".")
+    alert("Si on souhaite réellement additionner et non concaténer, il faut rajouter un '+' avant la variable a (qui a été définie comme une chaîne de caractères). Quand on procède ainsi, c vaut " + ex2c + ".");
 }
 function ex2_4() {
     let ex2d = true;
@@ -140,15 +140,15 @@ function ex3_2() {
     // calcule l'âge d'une personne (en année) selon une date passée au format DDMMYYYY en argument
     function calcAge(birthDateStr) {
         let birthDateStrTrimmed = cleanTrimDate(birthDateStr);
-        let birthDate = new Date(birthDateStrTrimmed.substr(4, 4), +birthDateStrTrimmed.substr(2, 2) - 1, birthDateStrTrimmed.substr(0, 2))
+        let birthDate = new Date(birthDateStrTrimmed.substr(4, 4), +birthDateStrTrimmed.substr(2, 2) - 1, birthDateStrTrimmed.substr(0, 2));
         if (isNaN(Date.parse(birthDate))) throw new Error("Merci de rentrer une date correcte.");
         else return ~~((Date.now() - birthDate) / (31557600000));
     }
     let birthDateStr = prompt("Entrez votre date de naissance au format JJ MM YYYY.");
     try {
         let age = calcAge(birthDateStr);
-        if (age >= 18) alert("Vous avez " + age + " ans. Vous êtes enfin majeur !")
-        else alert("Vous avez " + age + " ans. Vous êtes toujours mineur.. Encore " + (18 - age) + " ans avant la majorité !")
+        if (age >= 18) alert("Vous avez " + age + " ans. Vous êtes enfin majeur !");
+        else alert("Vous avez " + age + " ans. Vous êtes toujours mineur.. Encore " + (18 - age) + " ans avant la majorité !");
     } catch (err) {
         alert(err.message);
     }
@@ -157,7 +157,7 @@ function ex3_2() {
 function ex3_3() {
     let x = prompt("Entrez un premier nombre.");
     let y = prompt("Entrez un deuxième nombre.");
-    let o = prompt("Entrez un opérateur parmis + - * /.")
+    let o = prompt("Entrez un opérateur parmis + - * /.");
     // simple switch pour évaluer quel opérateur l'utilisateur a entré
     try {
         switch (o) {
@@ -178,5 +178,62 @@ function ex3_3() {
 }
 
 function ex4_1() {
-    let prenom = prompt("Entrez un prénom.");
+    let name;
+    let namesArr = [];
+    try {
+        while (name != "") {
+            if (testLetters(name)) throw new Error("Merci de rentrer un prénom correct.");
+            else {
+                name = prompt("Entrez un prénom.");
+                if (name == "") break;
+                namesArr.push(name);
+            }
+        }
+        if (namesArr.length == 0) throw new Error("Merci de rentrer au minimum un prénom.");
+        alert("Vous avez entré " + namesArr.length + " prénom(s). Voici la liste : " + namesArr);
+    }
+    catch (err) {
+        alert(err.message);
+    }
+}
+
+function ex4_2() {
+    let nb = prompt();
+    let nbArr = [];
+    try {
+        if (testNumber(nb)) throw new Error("Merci de rentrer un nombre correct.");
+        else for (let i = 0; i < nb; i++) {
+            nbArr.push(i);
+        }
+        alert("Les nombres plus petits que " + nb + " sont : " + nbArr + ".");
+    }
+    catch (err) {
+        alert(err.message);
+    }
+}
+
+
+
+function ex4_3() {
+    let nb = 1;
+    let nbArr = [];
+    let sum;
+    let avg;
+    try {
+        while (nb != "") {
+            if (testNumber(nb)) throw new Error("Merci de rentrer un nombre correct.");
+            else {
+                nb = prompt("Entrez un nombre.");
+                if (nb == "") break;
+                nbArr.push(nb);
+            }
+        }
+        if (nbArr.length == 0) throw new Error("Merci de rentrer au minimum un nombre.");
+        sum = nbArr.reduce((x, y) => +x + +y, 0);
+        avg = sum / nbArr.length;
+        alert("La somme des nombres " + nbArr + " est " + sum + ".\nLeur moyenne est " + avg + ".");
+    }
+    catch (err) {
+        alert(err.message);
+    }
 }
