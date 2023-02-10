@@ -20,6 +20,7 @@
             <li><a href="#ex2">Exercice 2</a></li>
             <li><a href="#ex3">Exercice 3</a></li>
             <li><a href="#ex4">Exercice 4</a></li>
+            <li><a href="#ex5">Exercice 5</a></li>
         </ul>
     </nav>
     <div class="content">
@@ -170,6 +171,51 @@
                 <button class="buttonEx" onclick="ex4_3()">Exercice 3</button>
                 <button class="buttonEx" onclick="ex4_4()">Exercice 4</button>
                 <button class="buttonEx" onclick="ex4_5()">Exercice 5</button>
+            </div>
+        </div>
+        <div id="ex5" class="exs">
+            <div>
+                <h2>Exercice 5</h2>
+                <ul>
+                    <li>
+                        <h3>Exercice 1</h3>
+                        <p>Créer les 2 fonctions suivantes :</p>
+                        <ul>
+                            <li><code>produit(x, y)</code> qui retourne le produit des 2 variables <code>x</code>,
+                                <code>y</code> passées en paramètre.
+                            </li>
+                            <li><code>afficheImg(image)</code> qui affiche l'image passée en paramètre. ( Le paramètre
+                                image correspond au chemin de votre image )</li>
+                        </ul>
+                        <p>Créer la page HTML correspondant au résultat ci-dessous :</p>
+                        <p><img src="media/papillon_demo.gif" alt="img_function_pap.JPG"></p>
+                        <p><em>Vous aurez besoin de <a target="_blank" href="media/papillon.jpg">cette
+                                    image</a></em></p>
+                        <h4>Ressource</h4>
+                        <p>Veuillez utiliser la propriété <strong>innerHTML</strong> pour réaliser cet exercice :</p>
+                        <ul>
+                            <li><a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp"
+                                    title="HTML DOM innerHTML">HTML DOM innerHTML</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Exercice 2 - String Token</h3>
+                        <p>Concevez la fonction <code>strtok()</code> qui prend 3 paramètres <code>str1</code>,
+                            <code>str2</code>, <code>n</code> en entrée et renvoie une chaîne de caractères : str1 est
+                            composée d'une liste de mots séparés par le caractère <code>str2</code>.
+                            <code>strtok()</code> sert à extraire le nième mot de <code>str1</code>.
+                        </p>
+                        <p><strong>Exemple :</strong></p>
+                        <p>Pour <em>str1 = « robert ;dupont ;amiens ;80000 », strtok (str1, « ; », 3)</em> doit
+                            retourner <em>amiens</em>.</p>
+                        <p><strong>Indice</strong> : <em>utilisez la méthode</em> <code>split()</code>.
+                        </p>
+                    </li>
+                </ul>
+                <div id="bfimg"></div>
+                <button class="buttonEx" onclick="ex5_1(false)">Exercice 1</button>
+                <button class="buttonEx" onclick="ex5_1(true)">RESET Exercice 1</button>
+                <button class="buttonEx" onclick="ex5_2()">Exercice 2</button>
             </div>
         </div>
     </div>

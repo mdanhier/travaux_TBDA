@@ -105,6 +105,16 @@ nav a {
     background-color: rgba(209, 161, 79, 0.3)
 }
 
+#ex5 {
+    background-color: rgba(202, 70, 242, 0.3)
+}
+
+#bfimg {
+    margin: 2%;
+    padding: 2%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 .buttonEx {
     background-color: #ccc;
     color: #222;

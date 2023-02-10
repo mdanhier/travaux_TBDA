@@ -58,8 +58,8 @@ function ex1_1() {
 }
 
 function ex1_2() {
-    let x = prompt("Entrez un premier nombre.");
-    let y = prompt("Entrez un deuxième nombre.");
+    let x = prompt("Entrez un nombre.");
+    let y = prompt("Entrez un multiplicateur.");
     try {
         if (testNumbersMany(x, y)) throw new Error("Merci de rentrer des nombres corrects.");
         else alert("Le produit de " + x + " par " + y + " est " + multiply(x, y));
@@ -273,6 +273,61 @@ function ex4_5() {
         alert("Il y a " + count + " voyelles dans la chaîne \"" + str + "\".")
     }
     catch (err) {
+        alert(err.message);
+    }
+}
+
+
+
+function ex5_1(reset) {
+    function resetEx5_1() {
+        // permet de réinitialiser la div pour pouvoir retester le bouton sans recharger la page
+        document.getElementById("bfimg").innerHTML = ""
+    }
+
+    function showEx5_1(src, x, y) {
+        // on rajoute l'image et le texte dans la div prévue à cet effet
+        document.getElementById("bfimg").innerHTML = "<img src='" + src + "' alt='Papillon'><p>Le cube de " + x + " est égal à " + Math.pow(x, 3) + ".</p><p>Le produit de " + x + " x " + y + " est égal à " + multiply(x, y) + ".</p>";
+    }
+    if (reset) {
+        try {
+            resetEx5_1();
+        }
+        catch (err) {
+            alert(err.message);
+        }
+    }
+    else {
+        let x = prompt("Entrez un nombre.");
+        let y = prompt("Entrez un multiplicateur.");
+        try {
+            // si tout se passe bien, on appelle la fonction showEx5_1 pour afficher le contenu de la div
+            if (testNumbersMany(x, y)) throw new Error("Merci de rentrer un nombre correct.");
+            showEx5_1("media/papillon.jpg", x, y);
+        }
+        catch (err) {
+            alert(err.message);
+        }
+    }
+}
+
+function ex5_2() {
+    function strTok(str1, str2, n) {
+        // on pense à faire le calcul n-1 car l'utilisateur compte à partir de 1 contrairement au tableau qui lui commence à 0.
+        if (str1.indexOf(str2) < 0) throw new Error("Ce caractère n'apparaît pas dans la chaîne.");
+        else return (str1.split(str2)[n - 1]);
+    }
+    let str = prompt("Entrez des mots séparés par un même caractère.");
+    let char = prompt("Entrez le caractère en question.");
+    let index = prompt("Quel est numéro du mot à obtenir ?");
+    try {
+        // on pense à vérifier que l'utilisateur ne rentre pas n'importe quoi / n'oublie pas de rentrer quelque chose
+        if (testNumber(index)) throw new Error("Merci de rentrer un numéro correct.");
+        if (char == '') throw new Error("Merci de rentrer un caractère correct.");
+        let token = strTok(str, char, index);
+        if (typeof token === "undefined" || token == '') throw new Error("Impossible de trouver le mot.");
+        else alert("Le mot n°" + index + " est " + token + ".");
+    } catch (err) {
         alert(err.message);
     }
 }
