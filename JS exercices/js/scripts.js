@@ -26,23 +26,19 @@ function testNumbersMany(...nbArr) {
 
 function multiply(x, y) {
     // fonction de multiplication basique
-    if (testNumbersMany(x, y)) throw new Error("Merci de rentrer deux nombres corrects.");
-    else return x * y;
+    return x * y;
 }
 function substract(x, y) {
     // fonction de soustraction basique
-    if (testNumbersMany(x, y)) throw new Error("Merci de rentrer deux nombres corrects.");
-    else return x - y;
+    return x - y;
 }
 function add(x, y) {
     // fonction d'addition basique
-    if (testNumbersMany(x, y)) throw new Error("Merci de rentrer deux nombres corrects.");
-    else return +x + +y;
+    return +x + +y;
 }
 function divide(x, y) {
     // fonction de division basique
-    if (testNumbersMany(x, y)) throw new Error("Merci de rentrer deux nombres corrects.");
-    else if (y == 0) throw new Error("La division par 0 est impossible.");
+    if (y == 0) throw new Error("La division par 0 est impossible.");
     else return x / y;
 }
 
@@ -65,7 +61,8 @@ function ex1_2() {
     let x = prompt("Entrez un premier nombre.");
     let y = prompt("Entrez un deuxième nombre.");
     try {
-        alert("Le produit de " + x + " par " + y + " est " + multiply(x, y));
+        if (testNumbersMany(x, y)) throw new Error("Merci de rentrer des nombres corrects.");
+        else alert("Le produit de " + x + " par " + y + " est " + multiply(x, y));
     } catch (err) {
         alert(err.message);
     }
@@ -122,7 +119,7 @@ function ex3_1() {
         else if (nb % 1 != 0) throw new Error("Seul un entier peut être pair ou impair.");
         else return (nb % 2 == 0);
     }
-    let nb = prompt("Entrez un nombre");
+    let nb = prompt("Entrez un nombre.");
     try {
         if (testEvenOdd(nb)) alert("Nombre pair.");
         else alert("Nombre impair.");
@@ -160,7 +157,8 @@ function ex3_3() {
     let o = prompt("Entrez un opérateur parmis + - * /.");
     // simple switch pour évaluer quel opérateur l'utilisateur a entré
     try {
-        switch (o) {
+        if (testNumbersMany(x, y)) throw new Error("Merci de rentrer des nombres corrects.");
+        else switch (o) {
             case '+':
                 return alert("Le résultat de " + x + o + y + " est : " + add(x, y));
             case '-':
@@ -198,7 +196,7 @@ function ex4_1() {
 }
 
 function ex4_2() {
-    let nb = prompt();
+    let nb = prompt("Entrez un nombre.");
     let nbArr = [];
     try {
         if (testNumber(nb)) throw new Error("Merci de rentrer un nombre correct.");
@@ -211,8 +209,6 @@ function ex4_2() {
         alert(err.message);
     }
 }
-
-
 
 function ex4_3() {
     let nb = 1;
@@ -232,6 +228,22 @@ function ex4_3() {
         sum = nbArr.reduce((x, y) => +x + +y, 0);
         avg = sum / nbArr.length;
         alert("La somme des nombres " + nbArr + " est " + sum + ".\nLeur moyenne est " + avg + ".");
+    }
+    catch (err) {
+        alert(err.message);
+    }
+}
+
+function ex4_4() {
+    let x = prompt("De quel nombre voulez-vous voir la table de multiplication ?");
+    let n = prompt("Jusqu'à quel multiple voulez-vous aller ?");
+    let msg = "";
+    try {
+        if (testNumbersMany(x, n)) throw new Error("Merci de rentrer des nombres corrects.");
+        for (let i = 0; i <= n; i++) {
+            msg += i + " x " + x + " = " + i * x + "\n";
+        }
+        alert(msg);
     }
     catch (err) {
         alert(err.message);
