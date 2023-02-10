@@ -1,7 +1,7 @@
 function testLetters(str) {
     /* sert à vérifier si l'argument passé est bien constitué de lettres (pour un prénom par exemple),
     malheureusement il est difficile de prendre en compte tous les caractères possibles dans toutes les langues */
-    return (!(/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u.test(str)) || str === null);
+    return (!(/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçœæčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u.test(str)) || str === null);
 }
 
 function testLettersMany(...strArr) {
@@ -182,12 +182,14 @@ function ex4_1() {
         while (name != "") {
             if (testLetters(name)) throw new Error("Merci de rentrer un prénom correct.");
             else {
+                // on demande un prénom et si il n'est pas vide, on le rentre dans un tableau, et on recommence
                 name = prompt("Entrez un prénom.");
                 if (name == "") break;
                 namesArr.push(name);
             }
         }
         if (namesArr.length == 0) throw new Error("Merci de rentrer au minimum un prénom.");
+        // on affiche le tableau contenant tous les prénoms
         alert("Vous avez entré " + namesArr.length + " prénom(s). Voici la liste : " + namesArr);
     }
     catch (err) {
@@ -200,6 +202,7 @@ function ex4_2() {
     let nbArr = [];
     try {
         if (testNumber(nb)) throw new Error("Merci de rentrer un nombre correct.");
+        // on demande un nombre et on parcourt une boucle de 0 jusqu'à ce nombre en insérant chaque valeur de l'index dans un tableau
         else for (let i = 0; i < nb; i++) {
             nbArr.push(i);
         }
@@ -219,12 +222,14 @@ function ex4_3() {
         while (nb != "") {
             if (testNumber(nb)) throw new Error("Merci de rentrer un nombre correct.");
             else {
+                // On demande un nombre jusqu'à ce que l'utilisateur ne rentre rien, on rentre à chaque fois le nombre donné dans un tableau
                 nb = prompt("Entrez un nombre.");
                 if (nb == "") break;
                 nbArr.push(nb);
             }
         }
         if (nbArr.length == 0) throw new Error("Merci de rentrer au minimum un nombre.");
+        // calcul de la somme via une fonction sur le tableau, puis de la moyenne grâce à la somme obtenue
         sum = nbArr.reduce((x, y) => +x + +y, 0);
         avg = sum / nbArr.length;
         alert("La somme des nombres " + nbArr + " est " + sum + ".\nLeur moyenne est " + avg + ".");
@@ -235,15 +240,37 @@ function ex4_3() {
 }
 
 function ex4_4() {
-    let x = prompt("De quel nombre voulez-vous voir la table de multiplication ?");
-    let n = prompt("Jusqu'à quel multiple voulez-vous aller ?");
+    let nb = prompt("De quel nombre voulez-vous voir la table de multiplication ?");
+    let mul = prompt("Jusqu'à quel multiple voulez-vous aller ?");
     let msg = "";
     try {
-        if (testNumbersMany(x, n)) throw new Error("Merci de rentrer des nombres corrects.");
-        for (let i = 0; i <= n; i++) {
-            msg += i + " x " + x + " = " + i * x + "\n";
+        if (testNumbersMany(nb, mul)) throw new Error("Merci de rentrer des nombres corrects.");
+        // on fait une boucle de 0 au Multiple pour calculer chaque multiple et les concaténer pour l'affichage
+        for (let i = 0; i <= nb; i++) {
+            msg += i + " x " + mul + " = " + i * mul + "\n";
         }
         alert(msg);
+    }
+    catch (err) {
+        alert(err.message);
+    }
+}
+
+function ex4_5() {
+    let str = prompt("Entrez une chaîne de caractères.");
+    let strFor;
+    let fvow;
+    let count = 0;
+    try {
+        if (str == "") throw new Error("Merci de rentrer une chaîne de caractères corrects.");
+        /* j'ai décidé de formater la chaîne pour retirer les diacritiques et transformer les voyelles spéciales en voyelles simples en "a"
+        Cette procédure me permet d'éviter de comparer toutes les voyelles à chaque itération de boucle */
+        strFor = (str.normalize("NFD").toLowerCase().replace(/\p{Diacritic}/gu, "").replace(/\{|ø|œ|æ|e|i|o|u|y|\}/gu, "a"))
+        fvow = strFor.indexOf("a");
+        for (let i = fvow, j = (fvow + 1); i <= strFor.length; i++, j++) {
+            if (strFor.substring(i, j) == "a") count++;
+        }
+        alert("Il y a " + count + " voyelles dans la chaîne \"" + str + "\".")
     }
     catch (err) {
         alert(err.message);
