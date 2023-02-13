@@ -5,22 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/github-markdown.min.css">
+    <link rel="stylesheet" href="css/menu-markdown.css">
+    <link rel="stylesheet" href="css/darcula.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/scripts.js"></script>
     <title>Exercices JS Afpa</title>
 </head>
 
-<body>
-    <nav>
+<body class="markdown-body">
+    <nav class="exNav">
         <ul>
             <li><a href="#ex1">Exercice 1</a></li>
             <li><a href="#ex2">Exercice 2</a></li>
             <li><a href="#ex3">Exercice 3</a></li>
             <li><a href="#ex4">Exercice 4</a></li>
             <li><a href="#ex5">Exercice 5</a></li>
+            <li><a href="#ex6">Exercice 6</a></li>
+            <li><a href="#ex7">Exercice 7</a></li>
+            <li><a href="#ex8">Exercice 8</a></li>
+            <li><a href="#ex9">Exercice 9</a></li>
+            <li><a href="#ex10">Exercice 10</a></li>
+            <li><a href="#ex11">Exercice 11</a></li>
         </ul>
     </nav>
     <div class="content">
@@ -142,7 +151,11 @@
                         <p>Ecrire un programme qui calcule les N premiers multiples d'un nombre entier X, N et X étant
                             entrés au clavier.</p>
                         <p>Exemple pour N=5 et X=7 :</p>
-                        <pre><code class="hljs">1 x 7 = 7<br>2 x 7 = 14<br>3 x 7 = 21<br>4 x 7 = 28<br>5 x 7 = 35</code></pre>
+                        <pre><code class="hljs">1 x 7 = 7
+2 x 7 = 14
+3 x 7 = 21
+4 x 7 = 28
+5 x 7 = 35</code></pre>
                         <p>Il est demandé de choisir la structure répétitive (for, while, do...while) la mieux
                             appropriée au
                             problème.
@@ -153,7 +166,8 @@
                         <p>Ecrire le programme qui compte le nombre de voyelles d’un mot saisi au clavier, en utilisant:
                         </p>
                         <ul>
-                            <li><code>myVar.length</code> : retourne le nombre de lettres de la chaîne
+                            <li><code>myVar.length</code> : retourne le nombre de lettres de la
+                                chaîne
                                 <code>myVar</code>.
                             </li>
                             <li><code>myVar.substring(p,n)</code> : extrait d'une chaîne donnée une sous-chaîne à partir
@@ -212,7 +226,7 @@
                         </p>
                     </li>
                 </ul>
-                <div id="bfimg"></div>
+                <div id="bfimg" class="bgbg"></div>
                 <button class="buttonEx" onclick="ex5_1(false)">Exercice 1</button>
                 <button class="buttonEx" onclick="ex5_1(true)">RESET Exercice 1</button>
                 <button class="buttonEx" onclick="ex5_2()">Exercice 2</button>
@@ -225,6 +239,105 @@
                 <p>Ensuite l'utilisateur doit rentrer les différentes valeurs du tableau.</p>
                 <p>Puis votre programme doit afficher le contenu du tableau.</p>
                 <button class="buttonEx" onclick="ex6_1()">Exercice 1</button>
+            </div>
+        </div>
+        <div id="ex7" class="exs">
+            <div>
+                <h2>Exercice 7 / Phase 12 - Les objets natifs</h2>
+                <p>Ecrivez un programme permettant de saisir différentes valeurs numérique (avec l'instruction
+                    <code>window.prompt</code>), ces valeurs seront rangées dans un tableau.
+                </p>
+                <p>Ensuite l'utilisateur doit rentrer les différentes valeurs du tableau.</p>
+                <p>A la fin de la saisie, votre programme doit afficher le nombre de valeurs saisies, la somme et la
+                    moyenne.</p>
+                <button class="buttonEx" onclick="ex7_1()">Exercice 1</button>
+            </div>
+        </div>
+        <div id="ex8" class="exs">
+            <div>
+                <h2>Exercice 8 / Phase 13 - Intégrer du Javascript dans une page web</h2>
+                <p>Le but est d'externaliser le code JavaScript dans un fichier <code>.js</code> puis de tester
+                    l'intégration de code HTML dans les fonctions Javascript.</p>
+                <ol>
+                    <li>
+                        <p>Copier le code suivant dans votre éditeur de texte préféré.</p>
+                        <pre><code class="hljs xml"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Mon 1er script<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        alert(<span class="hljs-string">"Coucou !"</span>);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Ah que Coucou !"</span>);
+        <span class="hljs-built_in">document</span>.write(<span class="hljs-string">"Coucou beuh !"</span>);
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span> 
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- Ajouter le code Javascript ici pour le titre --&gt;</span>   
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Rien à ajouter<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>  
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+                    </li>
+                </ol>
+                <p>Enregistrer le fichier puis l'ouvrir avec votre navigateur. Observez ce qu'il se passe, y compris
+                    dans la console.</p>
+                <ol start="2">
+                    <li>Créer un fichier JavaScript nommé <em>exercice1.js</em>.</li>
+                    <li>Déplacer le code JavaScript du fichier HTML dans le fichier externe JavaScript et importer ce
+                        fichier dans le fichier HTML.</li>
+                    <li>Répéter le titre de la page dans <code>&lt;body&gt;</code> avec l'instruction
+                        <code>document.write()</code>. Consultez la documentation sur le site <a
+                            href="https://www.w3schools.com/jsref/met_doc_write.asp">W3Schools</a>. Ajouter du code HTML
+                        dans la chaîne de caractères passée en paramètre.
+                    </li>
+                    <li>Modifier la fonction <code>alert()</code> pour y passer en paramètre également du code HTML. Que
+                        remarquez-vous ?</li>
+                </ol>
+                <button class="buttonEx" onclick="ex8_1()">Exercice 1</button>
+            </div>
+        </div>
+        <div id="ex9" class="exs">
+            <div>
+                <h2>Exercice 9 / Phase 14 - Les évènements</h2>
+                <p>Le clic sur le bouton <strong>Contrôler</strong> engendre l’appel à la fenêtre d’information.</p>
+                <p><strong>Résultat à obtenir</strong> :</p>
+                <p><img src="media/js_15_img_1.png" alt="image input type text + bouton &quot;Contrôler"></p>
+                <p><img src="media/js_15_img_2.png" alt="Alert"></p>
+                <p>Nombre Magique (the Magic Number)</p>
+                <p>Reprenez l'exercice du nombre magique</p>
+                <p><img src="media/js_15_img_3.png" alt="Alert"> </p>
+                <pre><code class="language-html hljs xml"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"fr"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Nombre magique<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"label1"</span>&gt;</span>Entrez votre proposition<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"textBox1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"button1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Verifier"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"verif();"</span>&gt;</span> 
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
+                <p>Votre programme doit générer un nombre aléatoire à l'aide de la fonction
+                    <code>Math.random</code>.
+                </p>
+                <p>Ecrivez la <code>fonction verif()</code> qui doit vérifier si la saisie de l'utilisateur (dans
+                    <code>textBox1</code>) correspond au nombre magique, elle affiche des informations, <strong>trop
+                        grand</strong>, <strong>trop petit</strong> dans le <code>label1</code>.
+                </p>
+                <p>Quand votre programme fonctionne, modifiez-le pour rendre le <strong>javascript non
+                        intrusif</strong>.</p>
+                <div class="bgbg">
+                    <ul id="liste9_1">
+                        <li>Entrez votre proposition pour un nombre de 0 à 100.</li>
+                    </ul>
+                    <input id="textBox9_1">
+                </div>
+                <button class="buttonEx" onclick="ex9_1(document.getElementById('textBox9_1').value, false)">Exercice
+                    1</button>
+                <button class="buttonEx" onclick="ex9_1('', true)">RESET Exercice 1</button>
             </div>
         </div>
     </div>

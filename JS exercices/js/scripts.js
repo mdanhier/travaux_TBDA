@@ -223,7 +223,7 @@ function ex4_3() {
             if (testNumber(nb)) throw new Error("Merci de rentrer un nombre correct.");
             else {
                 // On demande un nombre jusqu'à ce que l'utilisateur ne rentre rien, on rentre à chaque fois le nombre donné dans un tableau
-                nb = prompt("Entrez un nombre.");
+                nb = prompt("Entrez un nombre. Pour arrêter la saisie, appuyez sur Entrée");
                 if (nb == "") break;
                 nbArr.push(nb);
             }
@@ -340,6 +340,7 @@ function ex6_1() {
     let val;
     try {
         if (testNumbersMany(x, y)) throw new Error("Merci de rentrer des nombres corrects.");
+        // On fait ici une boucle imbriquée dans une autre boucle afin de gérer le tableau multidimensionnel
         for (let j = 0; j < y; j++) {
             arr[j] = {}
             for (let i = 0; i < x; i++) {
@@ -347,10 +348,80 @@ function ex6_1() {
                 arr[j][i] = val;
                 format += "[" + val + "]";
             }
+            // Je formate le tableau dans une chaîne de caractères à part pour l'afficher de manière plus claire à l'utilisateur
             format += "\n";
         }
         alert("On notera que chaque entrée se présente sous la forme \"index:valeur\" : " + JSON.stringify(arr) + "\nSous un format plus lisible, cela donne:\n" + format);
     } catch (err) {
         alert(err.message);
+    }
+}
+
+
+function ex7_1() {
+    let nb = 1;
+    let nbArr = [];
+    let sum;
+    let avg;
+    try {
+        while (nb != "") {
+            if (testNumber(nb)) throw new Error("Merci de rentrer un nombre correct.");
+            else {
+                // On demande un nombre jusqu'à ce que l'utilisateur ne rentre rien, on rentre à chaque fois le nombre donné dans un tableau
+                nb = prompt("Entrez un nombre.\nPour arrêter la saisie, appuyez sur Entrée.");
+                if (nb == "") break;
+                nbArr.push(nb);
+            }
+        }
+        if (nbArr.length == 0) throw new Error("Merci de rentrer au minimum un nombre.");
+        // calcul de la somme via une fonction sur le tableau, puis de la moyenne grâce à la somme obtenue
+        sum = nbArr.reduce((x, y) => +x + +y, 0);
+        avg = sum / nbArr.length;
+        alert("La somme des " + nbArr.length + " nombres (" + nbArr + ") est " + sum + ".\nLeur moyenne est " + avg + ".");
+    }
+    catch (err) {
+        alert(err.message);
+    }
+}
+
+function ex8_1() {
+    // On ouvre une autre page HTML où j'ai fait l'exercice afin de tester un peu la fonction write.document sans détruire la mienne
+    window.open('ex8.html')
+    alert("On remarquera que la fonction alert() ne permet pas d'utiliser du code HTML.")
+}
+
+var myst;
+function ex9_1(nb, reset) {
+    function resetEx9_1() {
+        // permet de réinitialiser le nombre mystère et le texte sur la page
+        document.getElementById('liste9_1').innerHTML =
+            "<li>Entrez votre proposition pour un nombre de 0 à 100.</li>";
+        myst = Math.floor(Math.random() * 101);
+    }
+    function tryEx9_1(nb) {
+        // on regarde si l'utilisateur a rentré le bon nombre
+        if (myst > nb) document.getElementById('liste9_1').innerHTML += ("<li>" + nb + " est plus petit que le nombre mystère.</li>")
+        else if (myst < nb) document.getElementById('liste9_1').innerHTML += ("<li>" + nb + " est plus grand que le nombre mystère.</li>")
+        else document.getElementById('liste9_1').innerHTML += ("<li>" + myst + " était le nombre mystère ! Bravo.</li>")
+    }
+    // on génère un nombre aléatoire entre 0 et 100 si la variable n'existe pas déjà
+    if (typeof myst === 'undefined') myst = Math.floor(Math.random() * 101);
+    if (reset) {
+        try {
+            resetEx9_1();
+        }
+        catch (err) {
+            alert(err.message);
+        }
+    }
+    else {
+        try {
+            // si tout se passe bien, on appelle la fonction tryEx9_1
+            if (testNumber(nb)) throw new Error("Merci de rentrer un nombre correct.");
+            tryEx9_1(nb);
+        }
+        catch (err) {
+            alert(err.message);
+        }
     }
 }

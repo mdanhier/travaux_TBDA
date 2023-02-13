@@ -5,47 +5,6 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-code {
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-    padding: 0.2em 0.4em;
-    padding-top: 0.2em;
-    padding-right: 0.4em;
-    padding-bottom: 0.2em;
-    padding-left: 0.4em;
-    margin: 0;
-    font-size: 85%;
-    background-color: rgba(27, 31, 35, .05);
-    border-radius: 3px;
-    color: #e83e8c;
-    word-wrap: break-word;
-}
-
-pre {
-    padding: 16px;
-    overflow: auto;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #242424;
-    border-radius: 3px;
-    word-wrap: normal;
-}
-
-pre code {
-    display: inline;
-    padding: 0;
-    margin: 0;
-    overflow: visible;
-    line-height: inherit;
-    word-wrap: normal;
-    background-color: initial;
-    border: 0;
-    font-size: 100%;
-    word-break: normal;
-    white-space: pre;
-    background: transparent;
-    border: 0;
-}
-
 hr {
     border-top: 1px dotted red;
 }
@@ -54,20 +13,34 @@ ul {
     list-style-type: disc;
 }
 
-nav {
+code {
+    color: #e83e8c;
+}
+
+img {
+    background-color: transparent !important;
+}
+
+.exNav {
     position: fixed;
     height: 100vh;
     width: 10vw;
-    background-color: rgba(162, 77, 168, 0.5)
+    background-color: rgba(162, 77, 168, 0.5);
 }
 
-nav li {
+.exNav:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75) inset;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75) inset;
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75) inset;
+}
+
+.exNav li {
     color: #000;
     font-size: 24px;
     margin: 25% 0;
 }
 
-nav a {
+.exNav a {
     color: #000;
 }
 
@@ -81,12 +54,10 @@ nav a {
     margin: 2%;
 }
 
-.exs:not(:first-child) {
-    border-top: 1px solid #000;
-}
-
-.exs:not(:last-child) {
-    border-bottom: 1px solid #000;
+.exs:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75) inset;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75) inset;
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75) inset;
 }
 
 #ex1 {
@@ -113,10 +84,22 @@ nav a {
     background-color: rgba(48, 255, 48, 0.3);
 }
 
-#bfimg {
+#ex7 {
+    background-color: rgba(58, 41, 109, 0.3);
+}
+
+#ex8 {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+#ex9 {
+    background-color: rgba(255, 251, 0, 0.3);
+}
+
+.bgbg {
     margin: 2%;
     padding: 2%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .buttonEx {
