@@ -331,3 +331,26 @@ function ex5_2() {
         alert(err.message);
     }
 }
+
+function ex6_1() {
+    let x = prompt("Entrez un nombre de colonnes.");
+    let y = prompt("Entrez un nombre de lignes.");
+    let arr = [];
+    let format = "";
+    let val;
+    try {
+        if (testNumbersMany(x, y)) throw new Error("Merci de rentrer des nombres corrects.");
+        for (let j = 0; j < y; j++) {
+            arr[j] = {}
+            for (let i = 0; i < x; i++) {
+                val = prompt("Entrez une valeur à insérer dans le tableau en position [" + i + "]" + "[" + j + "].");
+                arr[j][i] = val;
+                format += "[" + val + "]";
+            }
+            format += "\n";
+        }
+        alert("On notera que chaque entrée se présente sous la forme \"index:valeur\" : " + JSON.stringify(arr) + "\nSous un format plus lisible, cela donne:\n" + format);
+    } catch (err) {
+        alert(err.message);
+    }
+}
