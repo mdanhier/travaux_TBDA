@@ -36,29 +36,65 @@
                 <p>Le programme doit demander les âges successifs.</p>
                 <p>Le comptage est arrêté dès la saisie d'un centenaire. Le centenaire est compté.</p>
                 <p>Donnez le programme Javascript correspondant qui affiche les résultats.</p>
+                <div class="bgbg" id="divEx1"></div>
                 <button class="buttonEx" onclick="ex1_1()">Exercice 1</button>
             </div>
         </div>
         <div id="ex2" class="exs">
             <div>
-                <h2>Exercice 2 : Table de multiplication</h2>
+                <h2>Exercice 2 - Table de multiplication</h2>
                 <p>Ecrivez une fonction qui affiche une table de multiplication.</p>
                 <p>Votre fonction doit prendre un paramètre qui permet d'indiquer quelle table afficher.</p>
                 <p>Par exemple, <code>TableMultiplication(7)</code> doit afficher : </p>
                 <p>1 x 7 = 7</p>
                 <p>2 x 7 = 14</p>
                 <p>3 x 7 = 21 ...</p>
-                <button class="buttonEx" onclick="ex2_1()">Exercice 1</button>
+                <div class="bgbg" id="divEx2"></div>
+                <button class="buttonEx" onclick="ex2_1()">Exercice 2</button>
             </div>
         </div>
         <div id="ex3" class="exs">
             <div>
-
+                <h2>Exercice 3 - Recherche d'un prénom</h2>
+                <p>Un prénom est saisi au clavier. On le recherche dans le tableau <code>tab</code> donné ci-après. </p>
+                <p>Si le prénom est trouvé, on l'élimine du tableau en décalant les cases qui le suivent, et en mettant
+                    à blanc la dernière case.
+                    Si le prénom n'est pas trouvé un message d'erreur apparait et aucun prénom ne se supprime.</p>
+                <pre><code class="hljs cs"> <span class="hljs-keyword">var</span> tab = [<span class="hljs-string">"Audrey"</span>, <span class="hljs-string">"Aurélien"</span>, <span class="hljs-string">"Flavien"</span>, <span class="hljs-string">"Jérémy"</span>, <span class="hljs-string">"Laurent"</span>, <span class="hljs-string">"Melik"</span>, <span class="hljs-string">"Nouara"</span>, <span class="hljs-string">"Salem"</span>, <span class="hljs-string">"Samuel"</span>, <span class="hljs-string">"Stéphane"</span>];</code></pre>
+                <p>( exemple : ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem",
+                    "Samuel", " "]; )</p>
+                <div class="bgbg" id="divEx3"></div>
+                <button class="buttonEx" onclick="ex3_1()">Exercice 3</button>
             </div>
         </div>
         <div id="ex4" class="exs">
             <div>
-
+                <h2>Exercice 4 - Total d'une commande</h2>
+                <p>A partir de la saisie du prix unitaire noté PU d'un produit et de la quantité commandée QTECOM,
+                    afficher
+                    le prix à payer PAP, en détaillant la remise REM et le port PORT, sachant que :</p>
+                <ul>
+                    <li>TOT = ( PU * QTECOM )</li>
+                    <li>la remise est de 5% si TOT est compris entre 100 et 200 € et de 10% au-delà</li>
+                    <li>le port est gratuit si le prix des produits ( le total remisé ) est supérieur à 500 €. Dans le
+                        cas contraire, le
+                        port est de 2%</li>
+                    <li>la valeur minimale du port à payer est de 6 €</li>
+                </ul>
+                <p>Testez tous les cas possibles afin de vous assurez que votre script fonctionne.</p>
+                <p><strong>Ci-dessous, un jeu de tests</strong> :</p>
+                <ul>
+                    <li>Saisir 600 € et quantité = 1 : remise 10% (-60 €) soit 540,00 et frais port = 0; à payer : 540 €
+                    </li>
+                    <li>Saisir 501 € et quantité = 1 : remise 10% (-50,1 €) soit 450,90 et frais port 2% (de 450,90 €)
+                        soit +9,01 € ; à payer : 450,90+9.01 = 459,91 €. </li>
+                    <li>Saisir 100 € et quantité = 2 : 200 € donc remise 5% soit 190 € et frais de port 2% soit 3,8 €
+                        mini 6 €; à payer : 190+6 = 196 € </li>
+                    <li>Saisir 3 € et quantité = 1 : remise 0, frais de port 2% soit 0.06 € donc le minimum de 6 €
+                        s'applique; à payer : 3+6 = 9 €</li>
+                </ul>
+                <div class="bgbg" id="divEx4"></div>
+                <button class="buttonEx" onclick="ex4_1()">Exercice 4</button>
             </div>
         </div>
     </div>
