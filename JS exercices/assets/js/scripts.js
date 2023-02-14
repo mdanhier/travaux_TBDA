@@ -14,7 +14,7 @@ function testLettersMany(...strArr) {
 
 function testNumber(nb) {
     // sert à vérifier si l'argument passé est bien un nombre
-    return (isNaN(nb) || nb == '' || nb === null);
+    return (isNaN(nb) || nb === '' || nb === null);
 }
 
 function testNumbersMany(...nbArr) {
@@ -167,6 +167,8 @@ function ex3_3() {
                 return alert("Le résultat de " + x + o + y + " est : " + multiply(x, y));
             case '/':
                 return alert("Le résultat de " + x + o + y + " est : " + divide(x, y));
+            case '':
+                throw new Error("Vous devez entrer un opérateur.");
             default:
                 throw new Error(o + " n'est pas un opérateur valide.");
         }
@@ -202,6 +204,7 @@ function ex4_2() {
     let nbArr = [];
     try {
         if (testNumber(nb)) throw new Error("Merci de rentrer un nombre correct.");
+        if (!parseFloat(nb)) throw new Error("Il n'y a pas de nombre plus petit que 0.");
         // on demande un nombre et on parcourt une boucle de 0 jusqu'à ce nombre en insérant chaque valeur de l'index dans un tableau
         else for (let i = 0; i < nb; i++) {
             nbArr.push(i);
@@ -214,12 +217,12 @@ function ex4_2() {
 }
 
 function ex4_3() {
-    let nb = 1;
+    let nb = 0;
     let nbArr = [];
     let sum;
     let avg;
     try {
-        while (nb != "") {
+        while (true) {
             if (testNumber(nb)) throw new Error("Merci de rentrer un nombre correct.");
             else {
                 // On demande un nombre jusqu'à ce que l'utilisateur ne rentre rien, on rentre à chaque fois le nombre donné dans un tableau
@@ -246,8 +249,8 @@ function ex4_4() {
     try {
         if (testNumbersMany(nb, mul)) throw new Error("Merci de rentrer des nombres corrects.");
         // on fait une boucle de 0 au Multiple pour calculer chaque multiple et les concaténer pour l'affichage
-        for (let i = 0; i <= nb; i++) {
-            msg += i + " x " + mul + " = " + i * mul + "\n";
+        for (let i = 0; i <= mul; i++) {
+            msg += nb + " x " + i + " = " + i * nb + "\n";
         }
         alert(msg);
     }
@@ -340,6 +343,7 @@ function ex6_1() {
     let val;
     try {
         if (testNumbersMany(x, y)) throw new Error("Merci de rentrer des nombres corrects.");
+        if (x == 0 || y == 0) throw new Error("Merci de rentrer une taille supérieure à 0.");
         // On fait ici une boucle imbriquée dans une autre boucle afin de gérer le tableau multidimensionnel
         for (let j = 0; j < y; j++) {
             arr[j] = {}
