@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/github-markdown.min.css">
-    <link rel="stylesheet" href="css/menu-markdown.css">
-    <link rel="stylesheet" href="css/darcula.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="assets/css/github-markdown.min.css">
+    <link rel="stylesheet" href="assets/css/menu-markdown.css">
+    <link rel="stylesheet" href="assets/css/darcula.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/scripts.js"></script>
     <title>Exercices JS Afpa</title>
 </head>
 
@@ -29,7 +29,6 @@
             <li><a href="#ex8">Exercice 8</a></li>
             <li><a href="#ex9">Exercice 9</a></li>
             <li><a href="#ex10">Exercice 10</a></li>
-            <li><a href="#ex11">Exercice 11</a></li>
         </ul>
     </nav>
     <div class="content">
@@ -202,8 +201,8 @@
                                 image correspond au chemin de votre image )</li>
                         </ul>
                         <p>Créer la page HTML correspondant au résultat ci-dessous :</p>
-                        <p><img src="media/papillon_demo.gif" alt="img_function_pap.JPG"></p>
-                        <p><em>Vous aurez besoin de <a target="_blank" href="media/papillon.jpg">cette
+                        <p><img src="assets/media/papillon_demo.gif" alt="img_function_pap.JPG"></p>
+                        <p><em>Vous aurez besoin de <a target="_blank" href="assets/media/papillon.jpg">cette
                                     image</a></em></p>
                         <h4>Ressource</h4>
                         <p>Veuillez utiliser la propriété <strong>innerHTML</strong> pour réaliser cet exercice :</p>
@@ -301,11 +300,12 @@
                 <h2>Exercice 9 / Phase 14 - Les évènements</h2>
                 <p>Le clic sur le bouton <strong>Contrôler</strong> engendre l’appel à la fenêtre d’information.</p>
                 <p><strong>Résultat à obtenir</strong> :</p>
-                <p><img src="media/js_15_img_1.png" alt="image input type text + bouton &quot;Contrôler"></p>
-                <p><img src="media/js_15_img_2.png" alt="Alert"></p>
+                <p><img src="assets/media/js_15_img_1.png"
+                        alt="image input required type text + bouton &quot;Contrôler"></p>
+                <p><img src="assets/media/js_15_img_2.png" alt="Alert"></p>
                 <p>Nombre Magique (the Magic Number)</p>
                 <p>Reprenez l'exercice du nombre magique</p>
-                <p><img src="media/js_15_img_3.png" alt="Alert"> </p>
+                <p><img src="assets/media/js_15_img_3.png" alt="Alert"> </p>
                 <pre><code class="language-html hljs xml"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"fr"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
@@ -314,8 +314,8 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"label1"</span>&gt;</span>Entrez votre proposition<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"textBox1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"button1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Verifier"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"verif();"</span>&gt;</span> 
+        <span class="hljs-tag">&lt;<span class="hljs-name">input required</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"textBox1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input required</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"button1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Verifier"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"verif();"</span>&gt;</span> 
         <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
         </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
@@ -333,11 +333,90 @@
                     <ul id="liste9_1">
                         <li>Entrez votre proposition pour un nombre de 0 à 100.</li>
                     </ul>
-                    <input id="textBox9_1">
+                    <input required id="textBox9_1">
                 </div>
                 <button class="buttonEx" onclick="ex9_1(document.getElementById('textBox9_1').value, false)">Exercice
                     1</button>
                 <button class="buttonEx" onclick="ex9_1('', true)">RESET Exercice 1</button>
+            </div>
+        </div>
+        <div id="ex10" class="exs">
+            <div>
+                <h2>Exercice 10 / Phase 16 - Les formulaires</h2>
+                <p>Réaliser un formulaire "Contact.html" correspondant au modèle ci-dessous, avec les contraintes
+                    suivantes :</p>
+                <ul>
+                    <li>
+                        <p>Le formulaire sera envoyé grâce à la méthode "Post".</p>
+                    </li>
+                    <li>
+                        <p>La "Société" doit comporter au moins 1 caractère.</p>
+                    </li>
+                    <li>
+                        <p>La "Personne à contacter" doit comporter au moins 1 caractère.</p>
+                    </li>
+                    <li>
+                        <p>Le "Code postal" doit comporter 5 caractères numériques.</p>
+                    </li>
+                    <li>
+                        <p>La "Ville" doit comporter au moins 1 caractère.</p>
+                    </li>
+                    <li>
+                        <p>Le Email doit comporter au moins le caractère "@".</p>
+                    </li>
+                </ul>
+                <p><img src="assets/media/js_16_img_1.png" alt="formulaire à réaliser"></p>
+                <p>Le champ <strong>"Environnement technique"</strong> est une liste déroulante dans laquelle on peut
+                    choisir les techniques utilisées pour le projet proposé, ainsi qu'une zone de texte qui reçoit la
+                    sélection.</p>
+                <p>Il est permis de rajouter des informations manuelles dans la zone de texte.</p>
+                <p>La valeur <strong>"Choisissez"</strong> ne doit pas s'afficher dans la zone de texte si elle a été
+                    sélectionnée.</p>
+                <p><img src="assets/media/js_16_img_2.png" alt="liste déroulante"></p>
+                <p>Prévoyez les messages appropriés en cas d'erreur de saisie :</p>
+                <p><img src="assets/media/js_16_img_3.png" alt="messages d'erreur"></p>
+                <form id="formEx10" class="bgbg" method="post" onsubmit="return ex10_1(this)">
+                    <h1>Formulaire</h1>
+                    <h4 class="red">Les champs avec un * sont obligatoires.</h4>
+                    <div><label for="company"><span class="red">*</span> Société : </label><input required type="text"
+                            id="company" name="company">
+                    </div>
+                    <div><label for="contact"><span class="red">*</span> Personne à contacter : </label><input required
+                            type="text" id="contact" name="contact"></div>
+                    <div><label for="adress">Adresse de l'entreprise : </label><textarea id="adress"
+                            name="adress"></textarea></div>
+                    <div><label for="zip"><span class="red">*</span> Code Postal : </label><input required type="text"
+                            id="zip" name="zip"></div>
+                    <div><label for="city"><span class="red">*</span> Ville : </label><input required type="text"
+                            id="city" name="city"></div>
+                    <div><label for="email"><span class="red">*</span> E-mail : </label><input required type="email"
+                            id="email" name="email"></div>
+                    <div><label for="phone">Téléphone : </label><input type="text" id="phone" name="phone">
+                    </div>
+                    <div><label for="tecenv">Sélectionnez l'environnement technique du projet : </label>
+                        <textarea id="tecenv" name="tecenv"></textarea>
+                    </div>
+                    <div id="seldiv">
+                        <select onchange="ex10_1list(this)" name="teclis" id="teclis">
+                            <option value="" selected disabled>Choisissez</option>
+                            <option value="access">Access</option>
+                            <option value="java">Java</option>
+                            <option value="delphi">Delphi</option>
+                            <option value="windev">Windev</option>
+                            <option value="visualbasic">Visual Basic</option>
+                            <option value="powerbuilder">Power Builder</option>
+                            <option value="internet">Internet</option>
+                            <option value="intranet">Intranet</option>
+                            <option value="windowsnt">Windows NT</option>
+                            <option value="unix">Unix</option>
+                            <option value="sqlserver">SQL Server</option>
+                            <option value="oracle">Oracle</option>
+                            <option value="autres">Autres...</option>
+                        </select>
+                    </div>
+                </form>
+                <button class="buttonEx" form="formEx10">Exercice 1 - Envoyer le formulaire</button>
+                <button type="reset" class="buttonEx" form="formEx10">Exercice 1 - Réinitialiser le formulaire</button>
             </div>
         </div>
     </div>

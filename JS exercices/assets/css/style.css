@@ -21,6 +21,10 @@ img {
     background-color: transparent !important;
 }
 
+.red {
+    color: red;
+}
+
 .exNav {
     position: fixed;
     height: 100vh;
@@ -96,25 +100,66 @@ img {
     background-color: rgba(255, 251, 0, 0.3);
 }
 
+#ex10 {
+    background-color: rgba(123, 113, 128, 0.3);
+}
+
 .bgbg {
     margin: 2%;
     padding: 2%;
     background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
 }
 
 .buttonEx {
-    background-color: #ccc;
+    background-color: #19a8e0;
     color: #222;
-    border-radius: 12px;
+    border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
     padding: 10px 15px;
+    margin: 0 5px;
     text-align: center;
     border: 0;
     font-size: 16px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
 }
 
 .buttonEx:hover {
-    background: #aaa;
+    background-color: #1592c4;
     color: #000;
+}
+
+#ex10 form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+#ex10 form label {
+    text-align: right;
+    flex: 1;
+}
+
+#ex10 form input,
+#ex10 form textarea,
+#ex10 form select {
+    margin: 10px;
+    flex: 1;
+}
+
+#ex10 form textarea {
+    height: 75px;
+}
+
+#ex10 form div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ex10 #seldiv {
+    align-self: self-end;
 }

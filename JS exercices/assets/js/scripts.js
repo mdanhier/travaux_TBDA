@@ -285,9 +285,9 @@ function ex5_1(reset) {
         document.getElementById("bfimg").innerHTML = ""
     }
 
-    function showEx5_1(src, x, y) {
+    function showEx5_1(x, y) {
         // on rajoute l'image et le texte dans la div prévue à cet effet
-        document.getElementById("bfimg").innerHTML = "<img src='" + src + "' alt='Papillon'><p>Le cube de " + x + " est égal à " + Math.pow(x, 3) + ".</p><p>Le produit de " + x + " x " + y + " est égal à " + multiply(x, y) + ".</p>";
+        document.getElementById("bfimg").innerHTML = "<img src='assets/media/papillon.jpg' alt='Papillon'><p>Le cube de " + x + " est égal à " + Math.pow(x, 3) + ".</p><p>Le produit de " + x + " x " + y + " est égal à " + multiply(x, y) + ".</p>";
     }
     if (reset) {
         try {
@@ -303,7 +303,7 @@ function ex5_1(reset) {
         try {
             // si tout se passe bien, on appelle la fonction showEx5_1 pour afficher le contenu de la div
             if (testNumbersMany(x, y)) throw new Error("Merci de rentrer un nombre correct.");
-            showEx5_1("media/papillon.jpg", x, y);
+            showEx5_1(x, y);
         }
         catch (err) {
             alert(err.message);
@@ -423,5 +423,36 @@ function ex9_1(nb, reset) {
         catch (err) {
             alert(err.message);
         }
+    }
+}
+
+function ex10_1(form) {
+    try {
+        let zipFilter = new RegExp(/^[0-9]{5}$/);
+        let emailFilter = new RegExp(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/);
+        if (form.elements['company'].value.trim() == '') throw new Error("La société ne peut pas être vide.");
+        if (form.elements['contact'].value.trim() == '') throw new Error("La personne à contacter ne peut pas être vide.");
+        if (!zipFilter.test(form.elements['zip'].value)) throw new Error("Le code postal doit comporter 5 chiffres.");
+        if (form.elements['city'].value.trim() == '') throw new Error("La ville ne peut pas être vide.");
+        if (!emailFilter.test(form.elements['email'].value)) throw new Error("L'adresse e-mail est invalide.");
+        alert('Le formulaire a bien été envoyé.')
+    } catch (err) {
+        alert(err.message);
+    }
+    return false;
+}
+
+function ex10_1list(sel) {
+    try {
+        let seltxt = sel.options[sel.selectedIndex].text;
+        if (seltxt == "Choisissez") alert("Vous ne pouvez pas insérer cette valeur...");
+        else {
+            let areatxt = document.getElementById('tecenv')
+            if (areatxt.value == '') areatxt.value += seltxt;
+            else areatxt.value += ', ' + seltxt;
+        }
+
+    } catch (err) {
+        alert(err.message);
     }
 }
