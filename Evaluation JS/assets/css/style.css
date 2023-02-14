@@ -29,7 +29,7 @@ img {
     position: fixed;
     height: 100vh;
     width: 10vw;
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: rgba(0, 191, 191, 0.75);
 }
 
 .exNav:hover {
@@ -69,19 +69,19 @@ img {
 }
 
 #ex1 {
-    background-color: rgba(63, 0, 63, 0.3);
+    background-color: rgba(0, 63, 63, 0.3);
 }
 
 #ex2 {
-    background-color: rgba(127, 0, 127, 0.3)
+    background-color: rgba(0, 127, 127, 0.3)
 }
 
 #ex3 {
-    background-color: rgba(191, 0, 191, 0.3)
+    background-color: rgba(0, 191, 191, 0.3)
 }
 
 #ex4 {
-    background-color: rgba(255, 0, 255, 0.3)
+    background-color: rgba(0, 255, 255, 0.3)
 }
 
 .bgbg {

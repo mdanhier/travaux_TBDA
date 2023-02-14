@@ -368,11 +368,11 @@ function ex7_1() {
     let sum;
     let avg;
     try {
-        while (nb != "") {
+        while (true) {
             if (testNumber(nb)) throw new Error("Merci de rentrer un nombre correct.");
             else {
                 // On demande un nombre jusqu'à ce que l'utilisateur ne rentre rien, on rentre à chaque fois le nombre donné dans un tableau
-                nb = prompt("Entrez un nombre.\nPour arrêter la saisie, appuyez sur Entrée.");
+                nb = prompt("Entrez un nombre. Pour arrêter la saisie, appuyez sur Entrée.");
                 if (nb == "") break;
                 nbArr.push(nb);
             }
