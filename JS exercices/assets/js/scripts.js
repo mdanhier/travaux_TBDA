@@ -428,8 +428,10 @@ function ex9_1(nb, reset) {
 
 function ex10_1(form) {
     try {
+        // filtres RegEx pour le code postal et l'e-mail
         let zipFilter = new RegExp(/^[0-9]{5}$/);
         let emailFilter = new RegExp(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/);
+        // on fait chaque test pour vérifier que les valeurs attendues sont bien présentes
         if (form.elements['company'].value.trim() == '') throw new Error("La société ne peut pas être vide.");
         if (form.elements['contact'].value.trim() == '') throw new Error("La personne à contacter ne peut pas être vide.");
         if (!zipFilter.test(form.elements['zip'].value)) throw new Error("Le code postal doit comporter 5 chiffres.");
@@ -444,14 +446,16 @@ function ex10_1(form) {
 
 function ex10_1list(sel) {
     try {
+        // permet de mettre à jour la textarea concernant l'environnement technique grâce à la liste
         let seltxt = sel.options[sel.selectedIndex].text;
+        // si c'est la valeur par défaut, on empêche l'utilisateur de l'insérer
         if (seltxt == "Choisissez") alert("Vous ne pouvez pas insérer cette valeur...");
+        // autrement, on l'insère dans le textarea juste à côté
         else {
             let areatxt = document.getElementById('tecenv')
             if (areatxt.value == '') areatxt.value += seltxt;
             else areatxt.value += ', ' + seltxt;
         }
-
     } catch (err) {
         alert(err.message);
     }
