@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Jarditou - Accueil</title>
+</head>
+
+<body>
+    <div id="container" class="container-fluid d-flex flex-column">
+        <div class="row">
+            <nav class="navbar navbar-dark navbar-expand-lg bg-success fixed-top">
+                <div class="container-fluid px-5">
+                    <a class="navbar-brand" href="index.html">
+                        <img id="logo" class="d-none d-lg-block" src="assets/img/jarditou_logo.png" alt="logo jarditou">
+                        <span class="d-block d-lg-none">Jarditou</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navBarToggleItems" aria-controls="navBarToggleItems" aria-expanded="false"
+                        aria-label="Dérouler la navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navBarToggleItems">
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="index.html">Accueil</a>
+                            <a class="nav-link" href="tableau.html">Tableau</a>
+                            <a class="nav-link active" aria-current="page" href="formulaire.html">Formulaire</a>
+                        </div>
+                        <hr class="d-lg-none">
+                        <span class="ms-auto navbar-brand">La qualité depuis 70 ans</span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row col-lg-4 col-sm-12 nav-margin">
+            <form class="m-3" onsubmit="checkForm(this)">
+                <fieldset>
+                    <legend>Vos coordoonnées</legend>
+                    <div class="row mt-3">
+                        <div class="col-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="firstname" id="firstname"
+                                    placeholder="Prénom *">
+                                <label for="firstname" class="form-label text-muted">Prénom *</label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="lastname" id="lastname"
+                                    placeholder="Nom *">
+                                <label for="lastname" class="form-label text-muted">Nom *</label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" name="lastname" id="lastname"
+                                    placeholder="E-mail *">
+                                <label for="lastname" class="form-label text-muted">E-mail *</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <label for="birth">Date de naissance : </label>
+                                <input type="date" name="birth" id="birth">
+                            </div>
+                        </div>
+                        <div class="col-6 my-auto">
+                            <div class="d-flex justify-content-between">
+                                <label>Sexe * : </label>
+                                <div class="form-check form-check-inline m-0">
+                                    <input class="form-check-input" type="radio" name="sexe" id="male" value="male">
+                                    <label class="form-check-label" for="male">Homme</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0">
+                                    <input class="form-check-input" type="radio" name="sexe" id="female" value="female">
+                                    <label class="form-check-label" for="female">Femme</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="zip" id="zip" placeholder="Code postal *">
+                                <label for="zip" class="form-label text-muted">Code postal *</label>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="city" id="city" placeholder="Ville">
+                                <label for="city" class="form-label text-muted">Ville</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="address" id="address"
+                                    placeholder="Adresse">
+                                <label for="address" class="form-label text-muted">Adresse</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <footer class="row d-flex flex-wrap justify-content-between align-items-center bg-dark">
+            <span class="col-6 text-white">© Jarditou, Inc - Morgan Danhier TB 2023</span>
+            <ul class=" col-6 nav justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link p-2 text-white">Mentions légales</a></li>
+                <li class="nav-item p-2 text-white">|</li>
+                <li class="nav-item"><a href="#" class="nav-link p-2 text-white">Horaires</a></li>
+                <li class="nav-item p-2 text-white">|</li>
+                <li class="nav-item"><a href="#" class="nav-link p-2 text-white">Plan du site</a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
