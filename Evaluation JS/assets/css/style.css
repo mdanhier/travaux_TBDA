@@ -69,18 +69,22 @@ img {
 }
 
 #ex1 {
-    background-color: rgba(0, 63, 63, 0.3);
+    background-color: rgba(0, 51, 51, 0.3);
 }
 
 #ex2 {
-    background-color: rgba(0, 127, 127, 0.3)
+    background-color: rgba(0, 102, 102, 0.3)
 }
 
 #ex3 {
-    background-color: rgba(0, 191, 191, 0.3)
+    background-color: rgba(0, 153, 153, 0.3)
 }
 
 #ex4 {
+    background-color: rgba(0, 204, 204, 0.3)
+}
+
+#ex5 {
     background-color: rgba(0, 255, 255, 0.3)
 }
 
