@@ -52,3 +52,15 @@ table td {
 table img {
     height: 96px;
 }
+
+fieldset:not(:first-child) {
+    margin-top: 24px;
+}
+
+#topic {
+    width: 100%;
+}
+
+#request {
+    width: 100%;
+}
