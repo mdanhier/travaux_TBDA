@@ -64,3 +64,47 @@ fieldset:not(:first-child) {
 #request {
     width: 100%;
 }
+
+
+.tooltippopper {
+    background: #DC3545;
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.arrowpopper,
+.arrowpopper::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+}
+
+.arrowpopper {
+    visibility: hidden;
+}
+
+.arrowpopper::before {
+    visibility: visible;
+    content: '';
+    transform: rotate(45deg);
+}
+
+#tooltip[data-popper-placement^='top']>.arrowpopper {
+    bottom: -4px;
+}
+
+.tooltippopper[data-popper-placement^='bottom']>.arrowpopper {
+    top: -4px;
+}
+
+.tooltippopper[data-popper-placement^='left']>.arrowpopper {
+    right: -4px;
+}
+
+.tooltippopper[data-popper-placement^='right']>.arrowpopper {
+    left: -4px;
