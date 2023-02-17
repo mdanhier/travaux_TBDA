@@ -265,7 +265,7 @@ function checkForm(form) {
         }
         if (dataCB) msg += "<p>Vous avez accepté le traitement informatique de vos données.</p>";
         else {
-            tooltipdataCB.getElementsByTagName("span")[0].innerHTML = "Vous devez entrer votre demande";
+            tooltipdataCB.getElementsByTagName("span")[0].innerHTML = "Vous devez autoriser le traitement de vos données";
             tooltipdataCB.classList.remove("d-none");
             instancedataCB.update();
             return false;
