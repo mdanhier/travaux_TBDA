@@ -54,7 +54,7 @@ table img {
 }
 
 fieldset:not(:first-child) {
-    margin-top: 24px;
+    margin-top: 48px;
 }
 
 #topic {
@@ -63,8 +63,8 @@ fieldset:not(:first-child) {
 
 #request {
     width: 100%;
+    height: auto;
 }
-
 
 .tooltippopper {
     background: #DC3545;
@@ -74,6 +74,7 @@ fieldset:not(:first-child) {
     font-size: 16px;
     border-radius: 6px;
     z-index: 1;
+    transition: display ease .5s;
 }
 
 .arrowpopper,
@@ -94,7 +95,7 @@ fieldset:not(:first-child) {
     transform: rotate(45deg);
 }
 
-#tooltip[data-popper-placement^='top']>.arrowpopper {
+.tooltippopper[data-popper-placement^='top']>.arrowpopper {
     bottom: -4px;
 }
 
@@ -108,3 +109,4 @@ fieldset:not(:first-child) {
 
 .tooltippopper[data-popper-placement^='right']>.arrowpopper {
     left: -4px;
+}
