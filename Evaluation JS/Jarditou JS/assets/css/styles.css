@@ -1,15 +1,14 @@
+html {
+    font-size: 1rem;
+}
+
 html,
 body,
 #container {
     height: 100%;
 }
 
-nav {
-    min-height: 75px;
-}
-
 footer {
-    min-height: 75px;
     position: sticky;
     top: 100vh;
 }
@@ -27,7 +26,7 @@ footer {
 }
 
 #banner {
-    width: 50%;
+    width: max-content;
     text-align: center;
 }
 
@@ -109,4 +108,28 @@ fieldset:not(:first-child) {
 
 .tooltippopper[data-popper-placement^='right']>.arrowpopper {
     left: -4px;
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 576px) {
+    html {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    html {
+        font-size: 1.2rem;
+    }
 }
